@@ -1,0 +1,5 @@
+.center {text-align: center;}
+body {padding-top: 70px;}
+a.increaseFont:hover, a.decreaseFont:hover, a.increaseFont:active, a.decreaseFont:active, a.increaseFont:visited, a.decreaseFont:visited, a.increaseFont:focus, a.decreaseFont:focus {text-decoration: none;}
+nav.navbar, nav.navbar-default {background: rgba(0, 0, 0, 0);border-color: rgba(0, 0, 0, 0); box-shadow: 0px 1px 0px rgba(0, 0, 0, 0) inset, 0px 1px 5px rgba(0, 0, 0, 0);}
+.glyphicon {background: rgba(0, 0, 0, .1);padding: 10px 16px;font-size: 18px;line-height: 1.33;}

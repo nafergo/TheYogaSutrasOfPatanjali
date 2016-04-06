@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+<head>
+<title>The Yoga Sutras of Patanjali: The Book of the Spiritual Man</title>   
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }  @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }           @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+    </style>
+
+    <!-- Uncomment the following scripts if you convert your "Standard HTML5" project into a "Cordova" project. -->
+    <!-- <script src="cordova.js"></script> -->          <!-- phantom library, needed for Cordova api calls, added during build -->
+    <!-- <script src="js/app.js"></script> -->           <!-- recommended location of your JavaScript code relative to other JS files -->
+    <!-- <script src="xdk/init-dev.js"></script> -->     <!-- normalizes device and document ready events, see README for details -->
+
+
+
+<meta charset="utf-8" />
+<meta name="description" content="The Yoga Sutras of Patanjali: The Book of the Spiritual Man">
+<meta name="keywords" content="yoga, patanjali, spiritual, sutra">
+<meta name="author" content="nafergo" >
+
+<title>The Yoga Sutras of Patanjali: The Book of the Spiritual Man</title>   
+
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+
+
+<!-- CSS -->
+<link rel="stylesheet" href="css/style.css">
+
+ 
+
+</head>
+
+<body>
+
+
+    <!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+  
+
+<div class="pull-right">
+<a href="#" class="increaseFont"><span class="btn-default glyphicon glyphicon-plus img-circle" aria-hidden="true"></span></a>
+ <a href="#" class="decreaseFont"><span class="btn-default glyphicon glyphicon-minus img-circle" aria-hidden="true"></span></a>
+</div>
+
+
+  </div>
+</nav>      
+
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-xs-12">
+	
+<h1 class="center">The Yoga Sutras of Patanjali</h1>
+<h2 class="center">"The Book of the Spiritual Man"</h2>
+
+<h3 class="center"><i>An Interpretation</i></h3>
+<h4 class="center"  style="margin-top: 3em">By</h4>
+<h4 class="center">Charles Johnston</h4>
+
+<h5 class="text-center">1st Edition, 1912.</h5>
+
+
+<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3"  style="margin-top: 3em">
+<a type="button" class="btn btn-default btn-lg btn-block" href="yoga_sutras.html">The Yoga Sutras of Patanjali</a>
+<a type="button" class="btn btn-default btn-lg btn-block" href="yoga_sutras_commented.html">The Yoga Sutras commented</a>
+<a type="button" class="btn btn-default btn-lg btn-block" href="about.html">About the Book & Credits</a>
+</div>
+
+
+</div></div></div>
+
+  
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/jquery.scrollTo.min.js"></script>
+    	<script src="js/jquery.localScroll.min.js"></script>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+
+
+
+	<script type="text/javascript">
+		jQuery(function( $ ){
+			/**
+			 * Most jQuery.localScroll's settings, actually belong to jQuery.ScrollTo, check it's demo for an example of each option.
+			 * @see http://flesler.demos.com/jquery/scrollTo/
+			 * You can use EVERY single setting of jQuery.ScrollTo, in the settings hash you send to jQuery.LocalScroll.
+			 */
+			
+			// The default axis is 'y', but in this demo, I want to scroll both
+			// You can modify any default like this
+			$.localScroll.defaults.axis = 'y';
+			
+			/**
+			 * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+			 * also affect the >> and << links. I want every link in the page to scroll.
+			 */
+			$.localScroll({
+				target: 'body', // could be a selector or a jQuery object too.
+				queue:true,
+				duration:1000,
+				hash:true,
+				onBefore:function( e, anchor, $target ){
+					// The 'this' is the settings object, can be modified
+				},
+				onAfter:function( anchor, settings ){
+					// The 'this' contains the scrolled element (#content)
+				}
+			});
+		});
+		
+
+var changeFontSize = function (increaseFont) {
+    var fontTargets = new Array('h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'li', 'a');
+
+    fontTargets.forEach(function (element) {
+        var $element = $(element);
+        var newFontSize;
+        var currentFontSize = $element.css('font-size');
+        var currentFontSizeNum = parseFloat(currentFontSize, 10);
+
+        if (increaseFont) {
+            $element.css('font-size', 0);
+            newFontSize = currentFontSizeNum * 1.2;
+        } else {
+            newFontSize = currentFontSizeNum * 0.8;
+        }
+
+        $element.css('font-size', newFontSize);
+    });
+};
+
+$(document).ready(function () {
+    // Reset Font Size
+    var originalFontSize = $('body').css('font-size');
+
+    $(".resetFont").click(function () {
+        $('html').css('font-size', originalFontSize);
+    });
+    // Increase Font Size
+    $(".increaseFont").on('click', function () {
+        changeFontSize(true);
+    });
+    // Decrease Font Size
+    $(".decreaseFont").on('click', function () {
+        changeFontSize(false);
+    });
+});
+
+
+		
+	</script>
+
+
+
+
+</body>
+</html>
